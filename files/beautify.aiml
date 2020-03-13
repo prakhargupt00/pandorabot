@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>TEST</pattern>
+	    <template>
+	        <think><set name = "input">It IS cOLD OutSIDE. i THINK iT May rain</set></think>
+	        <random>
+	        <li> <lowercase> <get name="input"/>  </lowercase> </li>
+	        <li> <uppercase> <get name="input"/>  </uppercase> </li>
+	        <li> <formal>    <get name="input"/>  </formal>    </li>
+	        <li> <explode>   <get name="input"/>  </explode>   </li>
+	        </random>
+	    </template>
+    </category>
+</aiml>

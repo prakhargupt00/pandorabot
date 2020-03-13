@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<category>
+	    <pattern>MY NAME IS *</pattern>
+	    <template>
+	        Hi <set name="firstname"><star/>. </set>
+	        <condition name="firstname">
+	            <li value="Prakhar"> You have the same name as my creator!</li>
+	            <li value="messi">Not lionel Messi, are you?</li>
+	            <li value="modi">No way,houred to serve you!!</li>
+	            <li>Nice name</li>
+	        </condition>
+	    </template>
+    </category>
+    
+    <category>
+        <pattern>IS * A DAY OF THE WEEK</pattern>
+        <template>
+            <think><set name = "testday"><star/></set></think>
+            <condition name="tesday">
+                <li value="Sunday">yes</li>
+                <li value="Monday">yes</li>
+                <li value="Tueday">yes</li>
+                <li value="Wedday">yes</li>
+                <li value="Thursday">yes</li>
+                <li value="Friday">yes</li>
+                <li value="Satday">yes</li>
+                <li >no</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern></pattern>
+        <template></template>
+    </category>
+	
+</aiml>

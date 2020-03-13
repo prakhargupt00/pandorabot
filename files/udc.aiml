@@ -5,8 +5,124 @@
     <template>I have no answer for that.</template>
   </category>
   
+  <!--category defines pattern and template  -->
   <category>
-      <pattern>Hello bot</pattern>
+      <pattern>HELLO BOT </pattern>
+      <!--pattern essentially tells what user can type -->
+      
       <template>Hi there!</template>
+      <!--template tells how our bot is going to respond-->
   </category>
+  
+  <!--random is used to pick random among the list -->
+  <category>
+      <pattern>HI </pattern>
+      <template>
+          <random>
+              <li>Hello there</li>
+              <li>Good to see you again</li>
+              <li>Yo whats up!!</li>
+          </random>
+      </template>
+  </category>
+    
+     <category>
+      <pattern>ROLL A DICE</pattern>
+      <template>
+          <random>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+          </random>
+      </template>
+  </category>
+  
+  <!-- * , _ are most common wild cards used in aiml -->
+  <category>
+      <pattern>HELLO *</pattern>
+      <template>Hello World !</template>
+  </category>
+  
+  <!-- _ takes highest priority even before direct match -->
+
+  
+  <!--get and set used to make variable and retreive them respectively -->
+  <category>
+      <pattern>MY NAME IS * *</pattern>
+      <template>Hello <set name = "firstname"><star/></set>, How are you Mr.<set name = "surname"><star index="2"/></set>?</template>
+  </category>
+  
+  <category>
+      <pattern>SAY *</pattern>
+      <template><star index="1"/></template>
+  </category>
+  
+  <category>
+      <pattern>WHAT IS MY FULL NAME</pattern>
+      <template>Your name is <get name="firstname"/> <get name = "surname"></get></template>
+  </category>
+  
+  <!--anything between <think> is not displayed-->
+  <category>
+      <pattern>TEST</pattern>
+      <template>
+          <think>
+              <set name="person">
+                  <random>
+                      <li>Susan</li>
+                      <li>Jimmy</li>
+                      <li>Paul</li>
+                  </random>
+              </set>
+          </think>
+          The person I chose was <get name="person"/>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>I ATE *</pattern>
+      <template>
+          That sounds yummy
+          <think><set name = "food"><star/></set></think>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>WHAT FOOD I LIKE </pattern>
+      <template>
+          Well earlier you ate <get name="food" />, so that may be?
+      </template>
+  </category>
+  
+  <category>
+      <pattern>ASK ME A QUESTION</pattern>
+      <template>Do you like beach?</template>
+  </category>
+  
+    <category>
+      <pattern>ASK ME ANOTHER QUESTION</pattern>
+      <template>Do you drive car?</template>
+  </category>
+  
+   <!--use <that> to attach context to the pattern-->
+  <category>
+      <that>_ BEACH</that>
+      <pattern>YES</pattern>
+      <template>Me too its a nice way to relax</template>
+  </category>
+  
+
+  
+  <category>
+      <that>DO YOU drive CAR</that>
+      <pattern>YES</pattern>
+      <template> SO COOL</template>
+  </category>
+  
+  
+  
+  
 </aiml>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <!--learn tag helps ai to learn certai n category-->
+    <category>
+        <pattern>I AM *</pattern>
+        <template>
+            Thanks for telling me.
+            <learn>
+                <category>
+                    <pattern>WHAT AM I</pattern>
+                    <template>
+                        <!--eval used to compute context of star-->
+                        You told me you were <eval><star/></eval>
+                    </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>* IS *</pattern>
+        <template>
+            I have remembered that.
+            <learn>
+                <category>
+                    <pattern>WHAT IS <eval><star/></eval></pattern>
+                    <template> I believe it is <eval> <star index="2"/> </eval> </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+    
+    
+</aiml>

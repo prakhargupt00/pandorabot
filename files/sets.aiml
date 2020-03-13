@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+	<category>
+	    <!--if that color is in Sets file "games" say nice choice-->
+	    <pattern>MY FAVORITE GAME IS <set>games</set></pattern>
+	    <template>Nice choice!</template>
+    </category>
+    
+</aiml>

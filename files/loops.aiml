@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <!--set number predefined in aiml just recognises number-->
+	<category>
+	    <pattern> COUNT TO <set>number</set></pattern>
+	    <template>
+	        <think> <set name="count">0</set> </think>
+	        <condition name="count">
+	            <li>
+	                <value><star/></value>
+	           </li>
+	           
+	           <li>
+	               <set name = "count">
+	                   <map name="succesor"><get name="count"/></map>
+	               </set>
+	               <break/>
+	               <loop/>
+	           </li>
+	            
+	        </condition>
+	    </template>
+    </category>
+    
+</aiml>

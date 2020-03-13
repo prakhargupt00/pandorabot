@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>HELLO</pattern>
+	    <template>hi there</template>
+    </category>
+    
+    <category>
+        <pattern>HI</pattern>
+        <template>Hello</template>
+    </category>
+    
+    <!--srai is going to repeat the template of given-->
+    <category>
+        <pattern>Howdy</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+        <pattern>WHAT IS YOUR NAME</pattern>
+        <template>My name is pandorabot</template>
+    </category>
+    
+    <!--here bot age variable  we are getting from properties-->
+    <category>
+        <pattern>WHAT IS YOUR AGE</pattern>
+        <template>I am <bot name = "age"/> year old.</template>
+    </category>
+    
+    <category>
+        <pattern>WHO IS YOUR FATHER</pattern>
+        <template>I was created By Mr.Prakhar</template>
+    </category>
+    
+     <category>
+        <pattern>WHO IS <bot name="father"/></pattern>
+        <template>He is my father</template>
+    </category>
+    
+    <category>
+        <pattern>CAN YOU TELL ME YOUR *</pattern>
+        <template><srai>what is your *</srai></template>
+    </category>
+    
+</aiml>
