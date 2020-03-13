@@ -13,7 +13,7 @@
 	           
 	           <li>
 	               <set name = "count">
-	                   <map name="succesor"><get name="count"/></map>
+	                   <map name="successor"><get name="count"/></map>
 	               </set>
 	               <break/>
 	               <loop/>
