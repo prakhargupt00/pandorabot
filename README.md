@@ -1,2 +1,2 @@
 # pandorabot
-pandorabot is a witty chatbot created using AIML 
+pandorabot is a Tutorial chatbot created using AIML 
