@@ -10,7 +10,7 @@
 	            <li>
 	                <value><star/></value>
 	           </li>
-	           
+	            <!--successor predefined in aiml max iterations is 100 after that too slow-->
 	           <li>
 	               <set name = "count">
 	                   <map name="successor"><get name="count"/></map>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <!--reply's to the  option chosen by user-->
+	<category>
+	    <pattern>CHATBOTS</pattern>
+	    <template>
+	        Do you like chatbots?
+	        
+	        <image>
+                https://cdn4.vectorstock.com/i/1000x1000/02/78/electric-chatbot-mascot-customer-service-robot-vector-28280278.jpg
+            </image>
+            
+	        <reply>
+	            <text>Yes!</text>
+	            <postback>CHOOSEYES</postback>
+	        </reply>
+	        <reply>
+	            <text>No</text>
+	            <postback>CHOOSENO</postback>
+	        </reply>
+	    </template>
+    </category>
+    
+    <category>
+        <pattern>CHOOSEYES</pattern>
+        <template>Awesome! We like you too.</template>
+    </category>
+    
+    <category>
+        <pattern>CHOOSENO</pattern>
+        <template>Aw, that's a shame.I'm sad now</template>
+    </category>
+    
+    <!--buttons -->
+    <category>
+        <pattern>BUTTEST</pattern>
+        <template>
+            Please pick a option
+            <button>
+                <text>Book a ticket</text>
+                <postback>TICKET</postback>
+            </button>
+            <button>
+                <text>Visit our Website</text>
+                <url>http://www.google.com</url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>TICKET</pattern>
+        <template>
+            ....do ticket processing ....
+        </template>
+    </category>
+    
+    <!--images-->
+    <category>
+        <pattern>WHAT DO YOU LOOK LIKE</pattern>
+        <template>
+            I look like this.
+            <video>https://www.pandorabots.com/mitsuku/img/mitsuku.mp4</video>
+        </template>
+    </category>
+    <!--<break>  <split> <delay> used for formatting -->
+
+    
+</aiml>
+
+
+
+
